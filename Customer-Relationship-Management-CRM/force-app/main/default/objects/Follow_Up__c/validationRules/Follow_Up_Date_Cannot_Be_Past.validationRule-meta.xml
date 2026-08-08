@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK(Follow_Up_Date__c)), Follow_Up_Date__c &lt; TODAY(), ISPICKVAL(Status__c, "Pending"))</errorConditionFormula>
+    <errorDisplayField>Follow_Up_Date__c</errorDisplayField>
+    <errorMessage>Pending follow-up date cannot be in the past.</errorMessage>
+</ValidationRule>

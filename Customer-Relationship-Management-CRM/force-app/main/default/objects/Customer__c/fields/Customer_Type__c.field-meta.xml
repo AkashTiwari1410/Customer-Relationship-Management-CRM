@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Customer Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Individual</fullName><default>false</default><label>Individual</label></value>
+            <value><fullName>Business</fullName><default>true</default><label>Business</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

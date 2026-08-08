@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Customer CRM Dashboard" icon-name="standard:account">
+        <div class="dashboard-container">
+            <div class="summary-card">
+                <div class="summary-title">Total Customers</div>
+                <div class="summary-number">{customerCount}</div>
+            </div>
+
+            <template if:true={customers}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={customers}
+                    columns={columns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+
+            <template if:true={error}>
+                <div class="error-message">Unable to load customer data.</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
